@@ -36,6 +36,34 @@
     </div>
     <script>
     // Escríbe aquí tu código
+    let btn_sumar = document.getElementById("btn-sumar");
+    let btn_restar = document.getElementById("btn-restar");
+
+
+    btn_sumar.addEventListener("click", function(e){
+        let valor1 = Number.parseInt(document.getElementById("valor1").value);
+        let valor2 = Number.parseInt(document.getElementById("valor2").value);
+        let resultado = valor1 + valor2;
+
+        if(resultado < 0 )
+            resultado = 0;
+
+        document.querySelector(".resultado").innerHTML=`${resultado}`;
+    });
+
+
+    btn_restar.addEventListener("click", function(e){
+        let valor1 = Number.parseInt(document.getElementById("valor1").value);
+        let valor2 = Number.parseInt(document.getElementById("valor2").value);
+        let resultado = valor1 - valor2;
+
+        if(resultado < 0 )
+            resultado = 0;
+
+        document.querySelector(".resultado").innerHTML=`${resultado}`;
+    });
+
+
     </script>
 </body>
 
